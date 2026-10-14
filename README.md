@@ -1,58 +1,187 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Dieterai Payroll Management System
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300" alt="Laravel Logo">
 </p>
 
-## About Laravel
+<p align="center">
+  <strong>A Modern Payroll Management Solution for Kenyan Businesses</strong>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-13-FF2D20?logo=laravel&logoColor=white" alt="Laravel 13">
+  <img src="https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white" alt="PHP">
+  <img src="https://img.shields.io/badge/Database-MySQL-4479A1?logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/Status-Under%20Development-orange" alt="Project Status">
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+About Dieterai Payroll
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Dieterai Payroll** is a web-based payroll management system developed to simplify employee management, salary administration, payroll processing, statutory deductions, payslip generation, and payroll reporting for businesses in Kenya.
 
-## Learning Laravel
+Built using Laravel, PHP, and MySQL, the system aims to provide an organized platform for managing payroll operations, reducing repetitive manual calculations, improving record-keeping, and supporting efficient human resource and financial administration.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The application is designed around Kenyan payroll requirements and supports the administration of statutory deductions, employee earnings, employer contributions, and payroll records.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Key Features
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+Employee Management
+- Maintain employee profiles and employment records.
+- Organize employees by departments and positions.
+- Manage employee salary information and assignments.
+- Track employee-specific payroll adjustments.
 
-## Agentic Development
+Salary Management
+- Configure salary structures and basic salaries.
+- Manage allowances, earnings, and deductions.
+- Maintain salary structure assignment history.
+- Support employee-specific adjustments.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Payroll Processing
+- Create and manage payroll periods.
+- Process payroll runs and calculate employee earnings.
+- Calculate deductions and determine net salaries.
+- Generate detailed employee payslips.
+- Track payroll processing statuses.
+
+Kenyan Statutory Deductions
+The system includes modules for administering and calculating applicable Kenyan payroll deductions, including:
+
+- Pay As You Earn (PAYE)
+- National Social Security Fund (NSSF)
+- Social Health Insurance Fund (SHIF)
+- Affordable Housing Levy
+- National Industrial Training Authority (NITA) levy
+- Pension contributions
+- Higher Education Loans Board (HELB) deductions
+
+Statutory calculations and reporting should be verified against the applicable legislation and current requirements before production use.
+
+### Reports and Analytics
+- Payroll register reports.
+- Payroll history reports.
+- Salary reports.
+- Employee deduction reports.
+- Employer cost reports.
+- Payslip records and payroll summaries.
+
+### Security and Administration
+- User authentication.
+- Role-based access control.
+- Company and payroll settings.
+- Organized employee and payroll records.
+
+## Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| Laravel 13 | Backend application framework |
+| PHP 8.3+ | Server-side programming |
+| MySQL | Relational database |
+| Blade | Server-rendered user interface |
+| HTML, CSS and JavaScript | Frontend development |
+| Laragon | Local development environment |
+
+## Installation and Setup
+
+### Requirements
+
+Ensure your development environment has PHP, Composer, MySQL, and the required PHP extensions installed.
+
+### 1. Clone the repository
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/YOUR-USERNAME/dieterai-payroll.git
+cd dieterai-payroll
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Replace `YOUR-USERNAME` with your GitHub username.
+
+### 2. Install dependencies
+
+```bash
+composer install
+```
+
+### 3. Configure environment variables
+
+```bash
+copy .env.example .env
+php artisan key:generate
+```
+
+Update your `.env` file with your database credentials:
+
+```env
+APP_NAME="Dieterai Payroll"
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://dieterai-payroll.test
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=dieterai_payroll
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Create the database in MySQL before proceeding. Adjust the credentials to match your environment.
+
+### 4. Run database migrations
+
+```bash
+php artisan migrate
+```
+
+Run seeders if the project includes them and they are required:
+
+```bash
+php artisan db:seed
+```
+
+### 5. Start the application
+
+For a standard Laravel development server:
+
+```bash
+php artisan serve
+```
+
+Open the local URL displayed in your terminal. If using Laragon virtual hosts, configure the domain and project directory accordingly.
+
+## Development Status
+
+Dieterai Payroll is under active development. Features, statutory calculations, reports, and workflows may evolve as the application is tested and improved.
+
+Contributions, suggestions, bug reports, and constructive feedback are welcome.
+
+## Future Enhancements
+
+Planned areas for improvement may include:
+
+- Bulk employee import using Excel templates.
+- Employee self-service portal.
+- Email notifications and payslip delivery.
+- Enhanced dashboards and analytics.
+- Automated statutory return preparation.
+- Integrations with relevant external services.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+To contribute, fork the repository, create a feature branch, implement and test your changes, and submit a pull request describing your improvements.
 
-## Code of Conduct
+## Security
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability, avoid publishing sensitive exploit details in public issues. Contact the repository owner privately to coordinate responsible disclosure.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The project's distribution and licensing terms should be defined by its owner. Until a license is added to the repository, all rights remain with the copyright holder, subject to applicable law.
+
+---
+
+**Dieterai Payroll — Simplifying Payroll Management for Kenyan Businesses.**
+
+
+
